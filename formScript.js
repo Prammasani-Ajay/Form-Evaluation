@@ -55,7 +55,7 @@ input[2].addEventListener('keydown',mailaddress)
 function password(){
     const password = input[3].value
     // console.log(password)
-    if(!password.match(/^[A-Za-z0-9]{4,12}[\@\_\-]{1,2}[0-9A-Za-z]{2,6}$/)){
+    if(!password.match(/^[A-Za-z0-9]{4,15}[\@\_\-]{1,2}[0-9A-Za-z]{3,15}$/) &&  (password.length>=8 || password.length<=20)){
         input[3].setAttribute('style','line-height:35px;width:45vh;padding-left:10px;outline:none;border:2px solid orange;border-radius:5px;font-size:18px')
         errorMessage[3].innerHTML="Password must Alphanumeric allows(@,_,-)and 8 - 20 Characters"
     }else{
