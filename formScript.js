@@ -14,7 +14,8 @@ for(let i=0;i<errorMessage.length;i++){
 
 function firstName(){
     const firstName = input[0].value              //its not calculating last index value
-    // console.log(firstName)
+    
+    console.log(firstName)
     if(!firstName.match(/^[A-Z]{1}[a-z]{1,14}$/)){
         input[0].setAttribute('style','line-height:35px;width:45vh;padding-left:10px;outline:none;border:2px solid orange;border-radius:5px;font-size:18px')
         errorMessage[0].innerHTML="FirstName must starts with Capital and Contains 4-15 Characters"
@@ -23,12 +24,12 @@ function firstName(){
         errorMessage[0].innerHTML=""
     }
 }
-input[0].addEventListener('keydown',firstName)
+input[0].addEventListener('keyup',firstName)
 
 function userName(){
     const userName = input[1].value
     // console.log(userName)
-    if(!userName.match(/^[A-Za-z]{3,5}[0-9]{2,6}$/)){
+    if(!userName.match(/^[A-Za-z]{3,6}[0-9]{2,6}$/)){
         input[1].setAttribute('style','line-height:35px;width:45vh;padding-left:10px;outline:none;border:2px solid orange;border-radius:5px;font-size:18px')
         errorMessage[1].innerHTML="Username must contains 5 - 12 Characters"
     }else{
@@ -37,7 +38,7 @@ function userName(){
     }
 }
 
-input[1].addEventListener('keydown',userName)
+input[1].addEventListener('keyup',userName)
 
 function mailaddress(){
     const mailaddress = input[2].value
@@ -50,7 +51,7 @@ function mailaddress(){
         errorMessage[2].innerHTML=""
     }
 }
-input[2].addEventListener('keydown',mailaddress)
+input[2].addEventListener('keyup',mailaddress)
 
 function password(){
     const password = input[3].value
@@ -65,12 +66,12 @@ function password(){
         errorMessage[3].innerHTML=""
     }
 }
-input[3].addEventListener('keydown',password)
+input[3].addEventListener('keyup',password)
 
 function mobilenumber(){
     const mobilenumber = input[4].value
     // console.log(mobilenumber)
-    if(!mobilenumber.match(/^[6,7,8,9]{1}[0-9]{8}$/)){
+    if(!mobilenumber.match(/^[6,7,8,9]{1}[0-9]{9}$/)){
         input[4].setAttribute('style','line-height:35px;width:45vh;padding-left:10px;outline:none;border:2px solid orange;border-radius:5px;font-size:18px')
         errorMessage[4].innerHTML="Please enter valid Mobile number(10 digits)"
     }else{
@@ -78,12 +79,12 @@ function mobilenumber(){
         errorMessage[4].innerHTML=""
     }
 }
-input[4].addEventListener('keydown',mobilenumber)
+input[4].addEventListener('keyup',mobilenumber)
 
 function panCard(){
     const panCard = input[5].value
     // console.log(panCard)
-    if(!panCard.match(/^[A-Z]{5}[0-9]{4}[A-Z]{0}$/)){
+    if(!panCard.match(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/)){
         input[5].setAttribute('style','line-height:35px;width:45vh;padding-left:10px;outline:none;border:2px solid orange;border-radius:5px;font-size:18px')
         errorMessage[5].innerHTML="Enter a valid PANCARD Number "
     }else{
@@ -91,4 +92,4 @@ function panCard(){
         errorMessage[5].innerHTML=""
     }
 }
-input[5].addEventListener('keydown',panCard)
+input[5].addEventListener('keyup',panCard)
